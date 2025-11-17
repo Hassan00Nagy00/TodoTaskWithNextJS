@@ -1,0 +1,151 @@
+:root {
+  --accent: #0366d6;
+  --bg: #f5f6f8;
+  --card: #ffffff;
+  --muted: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.25rem;
+}
+
+.header {
+  background: white;
+  padding: 1rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.brand {
+  font-weight: 700;
+  margin-right: auto;
+  padding-left: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--accent);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+
+.link:hover {
+  background: rgba(3, 102, 214, 0.06);
+}
+
+.card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  margin-bottom: 0.75rem;
+}
+
+input[type="text"],
+textarea,
+input[type="datetime-local"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(3, 102, 214, 0.12);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #eef2f7;
+  margin-bottom: 0.6rem;
+}
+
+.task-left {
+  flex: 1;
+}
+.task-title {
+  font-weight: 600;
+  margin: 0;
+}
+.task-desc {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.task-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.completed .task-title {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.small {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+}
+
+.empty {
+  color: var(--muted);
+  text-align: center;
+  padding: 1rem;
+}
