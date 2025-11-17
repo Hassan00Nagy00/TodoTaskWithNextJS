@@ -14,8 +14,8 @@ export async function getTodoById(id) {
     if (!doc) return null;
     return JSON.parse(JSON.stringify(doc));
   } catch (err) {
-    if (err.name === "CastError") throw new Error("Invalid task ID format");
-    throw new Error("Failed to fetch todo");
+    if (err.name === "CastError") throw new Error("wrong ID format");
+    throw new Error("failed to fetch todo");
   }
 }
 
@@ -33,7 +33,7 @@ export async function addTodo(payload) {
           .join(", ")
       );
     }
-    throw new Error("Failed to create todo");
+    throw new Error("failed to create todo");
   }
 }
 
@@ -44,7 +44,7 @@ export async function updateTodo(id, data) {
       new: true,
       runValidators: true,
     }).lean();
-    if (!updated) throw new Error("Todo not found");
+    if (!updated) throw new Error("todo not found");
     return JSON.parse(JSON.stringify(updated));
   } catch (err) {
     if (err.name === "ValidationError") {
@@ -54,8 +54,8 @@ export async function updateTodo(id, data) {
           .join(", ")
       );
     }
-    if (err.name === "CastError") throw new Error("Invalid task ID format");
-    throw new Error("Failed to update todo");
+    if (err.name === "CastError") throw new Error("invalid task ID format");
+    throw new Error("failed to update todo");
   }
 }
 

@@ -1,4 +1,3 @@
-// simple db connection helper (works with dev/hot-reload)
 import mongoose from "mongoose";
 
 const MONGO_URL = process.env.MONGO_URL;

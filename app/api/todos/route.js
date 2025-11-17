@@ -6,8 +6,8 @@ export async function GET() {
     const todos = await getAllTodos();
     return NextResponse.json(todos, { status: 200 });
   } catch (err) {
-    console.error("GET /api/todos error:", err);
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
+    console.error("Get - api - todos error:", err);
+    return NextResponse.json({ error: "server error" }, { status: 500 });
   }
 }
 

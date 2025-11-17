@@ -74,9 +74,7 @@ export default function HomePage() {
         {loading ? (
           <div className="card empty">Loading tasks...</div>
         ) : tasks.length === 0 ? (
-          <div className="card empty">
-            No tasks yet — go to Add Task to create one.
-          </div>
+          <div className="card empty">create your first task, can you?</div>
         ) : (
           tasks.map((t) => (
             <div
