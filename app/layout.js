@@ -2,8 +2,8 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Simple ToDo App",
-  description: "A small ToDo app made with Next.js and MongoDB",
+  title: "My App",
+  description: "Tasks + Products App (Next.js + MongoDB)",
 };
 
 export default function RootLayout({ children }) {
@@ -12,13 +12,20 @@ export default function RootLayout({ children }) {
       <body>
         <header className="header">
           <div className="container nav">
-            <div className="brand">My ToDo App</div>
-            <nav>
+            <div className="brand">My App</div>
+
+            <nav style={{ display: "flex", gap: "20px" }}>
               <Link className="link" href="/">
-                Dashboard
+                Home
               </Link>
               <Link className="link" href="/tasks">
-                Add Task
+                Tasks
+              </Link>
+              <Link className="link" href="/products">
+                Products
+              </Link>
+              <Link className="link" href="/admin">
+                Admin
               </Link>
             </nav>
           </div>

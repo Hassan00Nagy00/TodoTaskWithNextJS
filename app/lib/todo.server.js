@@ -1,5 +1,5 @@
-import connectDB from "@/app/config/dbConnection";
-import ToDoModel from "@/app/models/todoModel";
+import connectDB from "../config/dbConnection";
+import ToDoModel from "../models/todoModel";
 
 export async function getAllTodos() {
   await connectDB();
