@@ -14,12 +14,11 @@ export default async function connectDB() {
     return cached.conn;
   }
   if (!cached.promise) {
-    // create a promise for mongoose connect
     cached.promise = mongoose
       .connect(MONGO_URL)
       .then((m) => m)
       .catch((err) => {
-        cached.promise = null; // allow retry next time
+        cached.promise = null;
         throw err;
       });
   }

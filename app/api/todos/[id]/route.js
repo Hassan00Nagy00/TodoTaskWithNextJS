@@ -14,7 +14,6 @@ function mapErrorToStatus(message = "") {
   return 500;
 }
 
-// GET /api/todos/:id
 export async function GET(request, { params }) {
   try {
     const { id } = await params;
@@ -29,7 +28,6 @@ export async function GET(request, { params }) {
   }
 }
 
-// PATCH /api/todos/:id
 export async function PATCH(request, { params }) {
   try {
     const { id } = await params;
@@ -48,7 +46,6 @@ export async function PATCH(request, { params }) {
   }
 }
 
-// DELETE /api/todos/:id
 export async function DELETE(request, { params }) {
   try {
     const { id } = await params;

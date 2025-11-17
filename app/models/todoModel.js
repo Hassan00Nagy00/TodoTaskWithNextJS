@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-// simple todo schema
 const ToDoSchema = new mongoose.Schema(
   {
     name: { type: String, required: [true, "Name is required"] },

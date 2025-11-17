@@ -1,7 +1,6 @@
 import connectDB from "@/app/config/dbConnection";
 import ToDoModel from "@/app/models/todoModel";
 
-// simple server helpers (junior naming)
 export async function getAllTodos() {
   await connectDB();
   const docs = await ToDoModel.find().lean();
